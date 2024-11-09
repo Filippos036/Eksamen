@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Forside</title>
+</head>
+<body>
+    <header>
+        <form>
+            <label for="search">Søk</label>
+            <input type="search" placeholder="søk her" id="search">
+            <input type="submit" value="søk">
+        </form>
+        <a href="index.html"><img src="Bilder/logo.png" alt="Nettsted logo"></a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Hjem</a></li>
+                <li><a href="product.html">Produkter</a></li>
+                <li><a href="#main">Kategorier</a></li>
+                <li><a href="#footer">Kontakt oss</a></li>
+            </ul>
+        </nav>
+        <img src="Bilder/user.png" alt="Bruker">
+        <img src="Bilder/hearth.png" alt="Hjerte">
+        <a href="checkout.html"><img src="Bilder/grocery-store.png" alt="Kurv"></a>
+    </header>
+    <main>
+        <h1>Kasse</h1>
+        <section>
+            <h2>Shoppingbaggen din</h2>
+            <article>
+                <img src="Bilder/Campus_00s_Sko_Gronn_H03472_01_standard.avif" alt="Product name">
+                <a href="#">Product name</a>
+                <a href="#"><h3>Handbal Spezial</h3></a>
+                <p>1999 kr</p>
+                <h4>Størrelse</h4>
+                <select id="størrelse" name="størrelse">
+                    <option value="small">S (Small)</option>
+                    <option value="medium">M (Medium)</option>
+                    <option value="large">L (Large)</option>
+                    <option value="x-large">XL (Extra Large)</option>
+                    <option value="xx-large">XXL (Double Extra Large)</option>
+                </select>
+                <h4>Antall</h4>
+                <select id="antall" name="antall">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </article>
+            <article>
+                <img src="Bilder/Campus_00s_Sko_Gronn_H03472_01_standard.avif" alt="Product name">
+                <a href="#">Product name</a>
+                <a href="#"><h3>Handbal Spezial</h3></a>
+                <p>1999 kr</p>
+                <h4>Størrelse</h4>
+                <select id="størrelse" name="størrelse">
+                    <option value="small">S (Small)</option>
+                    <option value="medium">M (Medium)</option>
+                    <option value="large">L (Large)</option>
+                    <option value="x-large">XL (Extra Large)</option>
+                    <option value="xx-large">XXL (Double Extra Large)</option>
+                </select>
+                <h4>Antall</h4>
+                <select id="antall" name="antall">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </article>
+        </section>
+        <section>
+            <h2>Dine opplysninger</h2>
+            <form action="#" method="post">
+                <label for="fornavn">fornavn</label>
+                <input type="text" id="fornavn" name="fornavn" required>
+                <label for="etternavn">Etternavn:</label>
+                <input type="text" id="etternavn" name="etternavn" required>
+                <label for="postnummer">Postnummer:</label>
+                <input type="number" id="postnummer" name="postnummer" required>
+                <label for="poststed">Poststed:</label>
+                <input type="text" id="poststed" name="poststed" required>
+                <button type="submit">Large</button>
+                <button type="reset">Avbryt</button>
+            </form>
+        </section>
+        <section>
+            <h2>Levering</h2>
+            <form action="#" method="post">
+                <input type="radio" id="ekspress_hjem" name="levering" value="ekspress_hjem" required>
+                <label for="ekspress_hjem">Ekspresslevering hjem</label><br><br>
+                <p>3-4 virkedager</p>
+                <input type="radio" id="ekspress_utleveringssted" name="levering" value="ekspress_utleveringssted" required>
+                <label for="ekspress_utleveringssted">Ekspress pakke til utleveringssted</label><br><br>
+                <p>1-3 virkedager</p>
+                <input type="radio" id="standard_hjemlevering" name="levering" value="standard_hjemlevering" required>
+                <label for="standard_hjemlevering">Standard hjemlevering</label><br><br>
+                <p>5-8 virkedager</p>
+                <button type="submit">Bekreft leveringsvalg</button>
+        </section>
+        <section>
+            <h2>Betaling</h2>
+            <form action="#" method="post">
+                <label for="kortnummer">kortnummer:</label>
+                <input type="text" id="kortnummer" name="kortnummer" required>
+                <label for="utlopsdato">Utløpsdato (MM/ÅÅ)</label>
+                <input type="text" id="utlopsdato" name="utlopsdato" required>
+                <label for="cvc">CVC/CVV</label>
+                <input type="password" id="cvc" name="cvc" required>
+                <button type="submit">Betal nå</button>
+                <p>Du bekrefter herved at opplysningene og dokumentene du har oppgitt er korrekte og fullstendige. Leverandøren forbeholder seg retten til å heve eller avslutte avtaleforholdet dersom det foreligger uriktige eller ufullstendige opplysninger.</p>
+                <input type="checkbox" id="vilkar" name="vilkar" required>
+                <label for="vilkar">Ja, jeg godtar</label>
+                <input type="checkbox" id="nyhetsbrev" name="nyhetsbrev">
+                <label for="nyhetsbrev">Send nyhetsbrev</label>
+            </form>
+        </section>
+    </main>
+    <footer id="footer">
+        <section>
+            <h4>Om oss</h4>
+            <a href="index.html"><img src="Bilder/logo.png" alt="Nettsted logo"></a>
+            <p>Sed ut perspiciatis unde</p>
+        </section>
+        <section>
+            <h4>Kontakt</h4>
+            <p>Adresse: Eksempelveien 123, 0123 Oslo</p>
+            <p>Telefon: +47 123 45 678</p>
+            <p>E-post: kontakt@eksempel.no</p>
+        </section>
+        <section>
+            <h4>Snarvei</h4>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Hjem</a></li>
+                    <li><a href="product.html">Produkter</a></li>
+                    <li><a href="#main">Kategorier</a></li>
+                    <li><a href="#footer">Kontakt oss</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section>
+            <h4>Sosiale medier</h4>
+            <nav>
+                <ul>
+                    <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+                    <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+                    <li><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://www.pinterest.com" target="_blank">Pinterest</a></li>
+                </ul>
+            </nav>
+        </section>
+    </footer>
+</body>
+</html>
