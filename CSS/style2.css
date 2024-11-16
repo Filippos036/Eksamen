@@ -3,12 +3,10 @@ html {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
 form input {
     border-radius: 25px;
     padding: 0.5rem;
 }
-
 
 label[for="search"] {
     position: absolute;
@@ -21,13 +19,11 @@ label[for="search"] {
     border: 0;
 }
 
-
 header {
     display: flex;
     align-items: center;
     padding: 1rem;
 }
-
 
 nav {
     margin: auto;
@@ -35,7 +31,6 @@ nav {
     font-weight: bold;
     font-size: 1.1rem;
 }
-
 
 nav ul {
     display: flex;
@@ -49,14 +44,12 @@ nav a {
     color: black;
 }
 
-
 header img {
     width: 35px;
     height: 35px;
     padding: 0.5rem;
     object-fit: cover;
 }
-
 
 nav ul img {
     width: 60px;
@@ -65,7 +58,6 @@ nav ul img {
     top: -15px; 
     padding: 0;
 }
-
 
 #flyt-icon {
     margin-left: 1rem;
@@ -86,12 +78,54 @@ form {
 
 main {
     padding: 2rem;
-    background-color: #f2f2f2; /* Background color for banner section */
+    background-color: #f2f2f2; 
 }
 
-/* Banner Section Styling */
 main section:first-of-type {
-    text-align: right; /* Align banner content to the right */
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center;
+    gap: 2rem; 
+}
+
+/* Overskrift og tekst */
+main section:first-of-type > h1,
+main section:first-of-type > p {
+    flex-basis: 100%; 
+    margin: 0 auto 1rem; 
+}
+
+main section:first-of-type > div {
+    display: flex; 
+    justify-content: center; 
+    gap: 1rem; 
+}
+
+main section:first-of-type > div > button {
+    padding: 0.5rem 1rem; 
+    border: 1px solid black;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 1rem; 
+    margin: 0; 
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+main section:first-of-type > div > button:hover {
+    background-color: #0073e6;
+    color: white;
+}
+
+main section:first-of-type article {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    background-color: #fff;
+    width: 100%; 
 }
 
 main section:first-of-type a {
@@ -106,78 +140,45 @@ main section:first-of-type a {
     border: 1px solid black;
 }
 
-/* Popular Products Section Styling */
-main section h1,
-main section h2 {
-    font-weight: bold;
-    margin-bottom: 1rem;
-}
-
-/* Buttons in Popular Products Section */
-main section:first-of-type button {
-    border: 1px solid black;
-    background-color: transparent;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    margin-right: 0.5rem;
-}
-
-/* Product Cards - Each article should stack vertically */
-main section:first-of-type article {
-    display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: start;
-    margin-bottom: 1rem;
-}
-
-main section:first-of-type article img {
-    max-width: 100%; /* Ensures responsive images */
-}
-
-main section:first-of-type article a,
-main section:first-of-type article h3,
-main section:first-of-type article p {
-    margin-top: 0.5rem;
-}
-
-/* Categories Section Styling */
 main section:nth-of-type(2) article {
-    border: 1px solid black;
     display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center content within each category card */
+    flex-direction: column;
+    align-items: center;
     padding: 1rem;
+    border: 1px solid black;
     margin-bottom: 1rem;
 }
 
-/* Center align the category name */
-main section:nth-of-type(2) article h3 {
+main .anmeldelser-kort {
+    display: grid;  /* Applying grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Auto-fit columns */
+    gap: 1rem;
+    margin-top: 2rem;  /* Adjust margin as needed */
+}
+
+main section:last-of-type article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    padding: 1rem;
+    background-color: white;
     text-align: center;
 }
 
-/* Reviews Section Styling */
-main section:last-of-type article {
-    display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: flex-start; /* Left align content */
-    border: 1px solid black;
-    padding: 1rem;
-    margin-bottom: 1rem;
-}
-
 main section:last-of-type article img {
-    max-width: 150px; /* Set max width for profile images */
+    max-width: 100px;
+    height: auto;
     margin-bottom: 1rem;
 }
 
-/* General Styling for Links and Text */
 main a {
     color: black;
     text-decoration: none;
 }
 
 main a:hover {
-    color: #0073e6; /* Optional hover color */
+    color: #0073e6;
 }
 
 #footer {
@@ -190,7 +191,6 @@ main a:hover {
     flex-wrap: wrap;
 }
 
-/* Each section in the footer */
 #footer section {
     display: flex;
     flex-direction: column;
@@ -199,23 +199,20 @@ main a:hover {
 }
 
 #footer section:nth-child(3) {
-    align-items: center; /* Center content in Snarvei section */
+    align-items: center; 
 }
 
-/* Only for Snarvei section - make links stack vertically */
 #footer section:nth-child(3) ul {
     display: flex;
-    flex-direction: column; /* Stack links vertically */
-    gap: 2rem; /* Space between each link */
+    flex-direction: column; 
+    gap: 2rem; 
 }
 
-/* Optional styling for section headers */
 #footer h4 {
     font-weight: bold;
     font-size: 1.2rem;
 }
 
-/* Optional link styling in footer */
 #footer a {
     text-decoration: none;
     color: black;
@@ -225,7 +222,6 @@ main a:hover {
     color: #0073e6;
 }
 
-/* Optional styling for footer images */
 #footer img {
     width: 50px;
     height: auto;
