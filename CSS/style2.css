@@ -3,31 +3,17 @@ html {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-form input {
-    border-radius: 25px;
-    padding: 0.5rem;
-}
-
-label[for="search"] {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
-}
-
 header {
     display: flex;
+    justify-content: space-between; 
     align-items: center;
-    padding: 1rem;
+    padding: 1rem 2rem;
+    background-color: #f8f8f8; 
 }
 
 nav {
-    margin: auto;
-    padding: 1rem;
+    margin: 0;
+    padding: 0;
     font-weight: bold;
     font-size: 1.1rem;
 }
@@ -36,10 +22,9 @@ nav ul {
     display: flex;
     list-style: none;
     gap: 1rem;
-    position: relative;
-    left: -40px;
+    padding: 0;
+    margin: 0;
 }
-
 
 nav a {
     text-decoration: none;
@@ -57,26 +42,38 @@ nav ul img {
     width: 60px;
     height: 60px;
     position: relative;
-    top: -15px; 
+    top: -15px;
     padding: 0;
 }
 
 #flyt-icon {
     margin-left: 1rem;
     position: relative;
-    top: -30px; 
+    top: -30px;
 }
 
 #flyt-icon img:nth-of-type(2) {
-    width: 40px; 
-    height: 40px; 
+    width: 40px;
+    height: 40px;
 }
 
-form {
-    margin: 2rem;
-    position: relative;
-    top: -30px;
+label[for="search"] {
+    position: absolute; 
+    width: 1px; 
+    height: 1px; 
+    padding: 0; 
+    margin: -1px; 
+    overflow: hidden; 
+    clip: rect(0, 0, 0, 0); 
+    border: 0; 
 }
+
+form input {
+    border-radius: 25px;
+    padding: 0.5rem;
+    margin-right: 1rem;
+}
+
 
 main {
     padding: 2rem;
@@ -159,18 +156,6 @@ main .kategori-kort img {
     object-fit: cover; 
 }
 
-@media (max-width: 768px) {
-    main .kategori-kort {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    main .kategori-kort {
-        grid-template-columns: 1fr; /* 1 column on very small screens */
-    }
-}
-
 main .populare-kort {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
@@ -229,18 +214,6 @@ main .populare-kort .kort-1 {
     background-image: url('../Bilder/cover.jpg'); 
 }
 
-
-@media (max-width: 768px) {
-    main .populare-kort {
-        grid-template-columns: 1fr; 
-    }
-
-    main .populare-kort > article {
-        max-width: 100%; 
-        grid-column: span 1; 
-    }
-}
-
 main section:last-of-type article img {
     max-width: 100px;
     height: auto;
@@ -269,24 +242,24 @@ main a {
     padding: 2rem;
     background-color: #f8f8f8;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: wrap;  
 }
 
 #footer section {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    min-width: 150px;
+    min-width: 150px;  
 }
 
 #footer section:nth-child(3) {
-    align-items: center; 
+    align-items: center;  
 }
 
 #footer section:nth-child(3) ul {
     display: flex;
-    flex-direction: column; 
-    gap: 2rem; 
+    flex-direction: column;
+    gap: 1rem;  
 }
 
 #footer h4 {
@@ -302,4 +275,93 @@ main a {
 #footer img {
     width: 50px;
     height: auto;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;  
+        padding: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;  
+        gap: 0.5rem;
+        align-items: center; 
+    }
+
+    #flyt-icon {
+        position: relative;
+        top: 0;
+        margin-left: 0;
+    }
+
+    #flyt-icon img {
+        width: 30px;
+        height: 30px;
+    }
+
+    form {
+        width: 100%;
+        margin-top: 1rem; 
+    }
+}
+
+@media (max-width: 768px) {
+    #footer {
+        padding: 1rem;  
+        gap: 1rem;  
+    }
+
+    #footer section {
+        min-width: 100%;  
+        align-items: center; 
+    }
+
+    #footer section:nth-child(3) ul {
+        gap: 1rem;  
+    }
+
+    #footer h4 {
+        font-size: 1rem;  
+    }
+
+    #footer img {
+        width: 40px;  
+    }
+}
+
+@media (max-width: 768px) {
+    main .populare-kort {
+        grid-template-columns: 1fr;  
+    }
+
+    main .populare-kort > article {
+        max-width: 100%;  
+        grid-column: span 1; 
+    }
+
+    main .populare-kort img {
+        width: 100%;      
+        height: auto;     
+    }
+    
+    main .populare-kort {
+        padding: 1rem;   
+    }
+
+    main .populare-kort > article {
+        padding: 0.5rem;  
+    }
+}
+
+@media (max-width: 768px) {
+    main .kategori-kort {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 480px) {
+    main .kategori-kort {
+        grid-template-columns: 1fr; 
+    }
 }
