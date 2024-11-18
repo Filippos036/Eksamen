@@ -36,6 +36,8 @@ nav ul {
     display: flex;
     list-style: none;
     gap: 1rem;
+    position: relative;
+    left: -40px;
 }
 
 
@@ -78,25 +80,18 @@ form {
 
 main {
     padding: 2rem;
-    background-color: #f2f2f2; 
 }
 
-main section:first-of-type {
-    display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    text-align: center;
-    gap: 2rem; 
-}
 
-/* Overskrift og tekst */
 main section:first-of-type > h1,
 main section:first-of-type > p {
+    display: flex;
     flex-basis: 100%; 
     margin: 0 auto 1rem; 
+    justify-content: center;
 }
 
-main section:first-of-type > div {
+main .knapp {
     display: flex; 
     justify-content: center; 
     gap: 1rem; 
@@ -117,62 +112,139 @@ main section:first-of-type > div > button:hover {
     color: white;
 }
 
-main section:first-of-type article {
-    display: flex;
-    flex-direction: column; 
-    align-items: flex-start; 
-    margin-bottom: 1rem;
-    border: 1px solid #ddd;
-    padding: 1rem;
-    background-color: #fff;
-    width: 100%; 
-}
 
 main section:first-of-type a {
     display: inline-block;
-    background-color: white;
     color: black;
     text-decoration: none;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
+    padding: 0.5rem 0rem;
     margin-top: 1rem;
     font-weight: bold;
-    border: 1px solid black;
 }
 
-main section:nth-of-type(2) article {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-    border: 1px solid black;
-    margin-bottom: 1rem;
-}
 
 main .anmeldelser-kort {
-    display: grid;  /* Applying grid layout */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Auto-fit columns */
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1rem;
-    margin-top: 2rem;  /* Adjust margin as needed */
+    margin-top: 2rem;  
 }
 
-main .kategori-kort{
-    display: grid;  /* Applying grid layout */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Auto-fit columns */
+main .kategori-kort {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
     gap: 1rem;
-    margin-top: 2rem;  /* Adjust margin as needed */
+    margin-top: 3rem;
+    padding: 2rem; 
+    justify-items: center; 
+    align-items: center;  
+    width: 100%;  
+}
+
+main .kategori-kort > article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    padding: 1rem;
+    border-radius: 25px;
+}
+
+main .kategori-kort img {
+    height: 350px;
+    width: 350px;
+    border: 1px solid #424242;
+    border-radius: 25px;
+    object-fit: cover; 
+}
+
+@media (max-width: 768px) {
+    main .kategori-kort {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    main .kategori-kort {
+        grid-template-columns: 1fr; /* 1 column on very small screens */
+    }
 }
 
 main .populare-kort {
-    display: grid;  /* Applying grid layout */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Auto-fit columns */
-    gap: 1rem;
-    margin-top: 2rem;  /* Adjust margin as needed */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: auto;
+    gap: 0.5rem; 
+    margin-top: 2rem;
 }
 
-main .populare-kort img{
-    width: 250px;
-    height: 250px;
+main .populare-kort > article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 11rem;
+    border-radius: 7px;
+    background-size: cover; 
+    background-position: center;
+}
+
+main .populare-kort .kort-1,
+main .populare-kort .kort-2,
+main .populare-kort .kort-3 {
+    max-width: 300px;
+    grid-column: span 1; 
+    background-size: cover;
+    background-position: center;
+}
+
+main .populare-kort .kort-4 {
+    max-width: 864px;
+    grid-column: span 2; 
+    grid-row: span 1; 
+    background-size: cover;
+    background-position: center;
+    background-image: url('../Bilder/cover.jpg');
+}
+
+main .populare-kort .kort-5 {
+    max-width: 300px;
+    grid-column: 3; 
+    grid-row: 2; 
+    background-size: cover;
+    background-position: center;
+    background-image: url('../Bilder/cover.jpg');
+}
+
+main .populare-kort .kort-2, 
+main .populare-kort .kort-3 {
+    background-image: url('../Bilder/cover.jpg'); 
+}
+
+main .populare-kort .kort-1 {
+    background-image: url('../Bilder/cover.jpg'); 
+}
+
+
+@media (max-width: 768px) {
+    main .populare-kort {
+        grid-template-columns: 1fr; 
+    }
+
+    main .populare-kort > article {
+        max-width: 100%; 
+        grid-column: span 1; 
+    }
+}
+
+main section:last-of-type article img {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 1rem;
 }
 
 main section:last-of-type article {
@@ -185,19 +257,9 @@ main section:last-of-type article {
     text-align: center;
 }
 
-main section:last-of-type article img {
-    max-width: 100px;
-    height: auto;
-    margin-bottom: 1rem;
-}
-
 main a {
     color: black;
     text-decoration: none;
-}
-
-main a:hover {
-    color: #0073e6;
 }
 
 #footer {
@@ -235,10 +297,6 @@ main a:hover {
 #footer a {
     text-decoration: none;
     color: black;
-}
-
-#footer a:hover {
-    color: #0073e6;
 }
 
 #footer img {
