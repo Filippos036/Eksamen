@@ -1,4 +1,4 @@
-
+/*header for alle tre sider*/
 html {
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -52,6 +52,7 @@ nav ul img {
     top: -30px;
 }
 
+/*denne ...*/
 #flyt-icon img:nth-of-type(2) {
     width: 40px;
     height: 40px;
@@ -69,12 +70,11 @@ label[for="search"] {
 }
 
 form input {
-    border-radius: 25px;
     padding: 0.5rem;
     margin-right: 1rem;
 }
 
-
+/* for index.html*/
 main {
     padding: 2rem;
 }
@@ -105,7 +105,7 @@ main section:first-of-type > div > button {
 }
 
 main section:first-of-type > div > button:hover {
-    background-color: #0073e6;
+    background-color: #a3c4e6;
     color: white;
 }
 
@@ -214,13 +214,13 @@ main .populare-kort .kort-1 {
     background-image: url('../Bilder/cover.jpg'); 
 }
 
-main section:last-of-type article img {
+.anmeldelser-kort img {
     max-width: 100px;
     height: auto;
     margin-bottom: 1rem;
 }
 
-main section:last-of-type article {
+.anmeldelser-kort article {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -235,6 +235,7 @@ main a {
     text-decoration: none;
 }
 
+/*css footer for alle tre sider*/
 #footer {
     display: flex;
     flex-direction: row;
@@ -277,7 +278,11 @@ main a {
     height: auto;
 }
 
+/* Media queries for index.html */
+
+/* For screens smaller than or equal to 768px */
 @media (max-width: 768px) {
+    /* Header styles */
     header {
         flex-direction: column;  
         padding: 1rem;
@@ -300,13 +305,7 @@ main a {
         height: 30px;
     }
 
-    form {
-        width: 100%;
-        margin-top: 1rem; 
-    }
-}
-
-@media (max-width: 768px) {
+    /* Footer styles */
     #footer {
         padding: 1rem;  
         gap: 1rem;  
@@ -328,40 +327,231 @@ main a {
     #footer img {
         width: 40px;  
     }
-}
 
-@media (max-width: 768px) {
+    /* Main .populare-kort styles */
     main .populare-kort {
         grid-template-columns: 1fr;  
+        padding: 1rem;
     }
 
     main .populare-kort > article {
         max-width: 100%;  
         grid-column: span 1; 
+        padding: 0.5rem;  
     }
 
     main .populare-kort img {
         width: 100%;      
         height: auto;     
     }
-    
-    main .populare-kort {
-        padding: 1rem;   
-    }
 
-    main .populare-kort > article {
-        padding: 0.5rem;  
-    }
-}
-
-@media (max-width: 768px) {
+    /* Main .kategori-kort styles */
     main .kategori-kort {
         grid-template-columns: repeat(2, 1fr); 
     }
 }
 
+/* For screens smaller than or equal to 480px */
 @media (max-width: 480px) {
     main .kategori-kort {
         grid-template-columns: 1fr; 
     }
+}
+
+/*for kasse.html css*/
+main .shoppingbag {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+main .shoppingbag h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #333;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+main .shoppingbag article {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+main .shoppingbag article img {
+    width: 100%;
+    max-width: 500px;  
+    height: auto;     
+    margin-bottom: 10px;
+}
+
+main .shoppingbag article select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/*opplysninger css*/
+main .opplysninger {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+main .opplysninger form label,
+main .opplysninger form input {
+    display: block;
+    width: 70%;
+    margin-bottom: 15px;
+    font-size: 1em;
+    padding: 10px;
+}
+
+main .opplysninger form button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #6a6b6b;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/*levering css*/
+main .levering {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+main .levering form input[type="radio"],
+main .levering form label {
+    display: block; 
+    margin-top: 5px; 
+}
+
+main .levering form label {
+    position: relative;
+    left: 35px;
+    top: -12px;
+}
+
+main .levering form label {
+    margin-left: 10px;
+    font-size: 1em;
+}
+
+main .levering form input {
+    position: relative;
+    bottom: -10px;
+}
+
+main .levering button {
+    display: block;
+    width: 100%; 
+    padding: 15px;
+    background-color: #6a6b6b;
+    color: white;
+    font-weight: bold; 
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 20px; 
+}
+
+main .levering img {
+    width: 30px; 
+    height: auto; 
+    vertical-align: middle; 
+    margin-right: 10px; 
+}
+
+main .levering p {
+    display: inline-block; 
+    vertical-align: middle; 
+    margin: 0; 
+}
+
+/*Betaling css*/
+main .Betaling section {
+    border: 1px solid #ccc; 
+    padding: 15px; 
+    margin-bottom: 20px; 
+    border-radius: 5px; 
+}
+
+main .Betaling form #kortnummer {
+    display: block;
+    width: 100%; 
+    padding: 10px;
+    margin-bottom: 15px; 
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-sizing: border-box; 
+}
+
+main .Betaling form {
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 10px; 
+}
+
+main .Betaling form #utlopsdato,
+main .Betaling form #cvc {
+    width: 35%; 
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-sizing: border-box; 
+}
+
+main .Betaling form button {
+    display: block;
+    width: 100%; 
+    padding: 15px;
+    background-color: #6a6b6b;
+    color: white;
+    font-weight: bold; 
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 20px; 
+}
+
+main .Betaling form p {
+    text-align: center; 
+    font-size: 14px;
+    margin-top: 10px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+main .Betaling form label {
+    margin-left: 5px; 
+    vertical-align: middle;
+}
+
+main .Betaling form input[type="checkbox"] {
+    margin-right: 10px; 
+    vertical-align: middle;
+    margin-top: 5px;
+}
+
+main .Betaling form .totalpris {
+    font-size: 20px; 
+    font-weight: bold; 
+    text-align: center;
+    margin-top: 15px;
 }

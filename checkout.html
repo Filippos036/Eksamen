@@ -17,7 +17,7 @@
             <ul>
                 <li><a href="index.html">Hjem</a></li>
                 <li><a href="product.html">Produkter</a></li>
-                <a href="index.html"><img src="Bilder/logo.png" alt="Nettsted logo"></a>
+                <li><a href="index.html"><img src="Bilder/logo.png" alt="Nettsted logo"></a></li>
                 <li><a href="#main">Kategorier</a></li>
                 <li><a href="#footer">Kontakt oss</a></li>
             </ul>
@@ -30,100 +30,112 @@
     </header>
     <main>
         <h1>Kasse</h1>
-        <section>
-            <h2>Shoppingbaggen din</h2>
-            <article>
-                <img src="Bilder/Campus_00s_Sko_Gronn_H03472_01_standard.avif" alt="Product name">
-                <a href="#">Product name</a>
-                <a href="#"><h3>Handbal Spezial</h3></a>
-                <p>1999 kr</p>
-                <h4>Størrelse</h4>
-                <select id="storrelse" name="storrelse">
-                    <option value="small">S (Small)</option>
-                    <option value="medium">M (Medium)</option>
-                    <option value="large">L (Large)</option>
-                    <option value="x-large">XL (Extra Large)</option>
-                    <option value="xx-large">XXL (Double Extra Large)</option>
-                </select>
-                <h4>Antall</h4>
-                <select id="antall" name="antall">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-            </article>
-            <article>
-                <img src="Bilder/Campus_00s_Sko_Gronn_H03472_01_standard.avif" alt="Product name">
-                <a href="#">Product name</a>
-                <a href="#"><h3>Handbal Spezial</h3></a>
-                <p>1999 kr</p>
-                <h4>Størrelse</h4>
-                <select id="storrelse1" name="storrelse1">
-                    <option value="small">S (Small)</option>
-                    <option value="medium">M (Medium)</option>
-                    <option value="large">L (Large)</option>
-                    <option value="x-large">XL (Extra Large)</option>
-                    <option value="xx-large">XXL (Double Extra Large)</option>
-                </select>
-                <h4>Antall</h4>
-                <select id="antall1" name="antall1">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-            </article>
-        </section>
-        <section>
-            <h2>Dine opplysninger</h2>
-            <form action="#" method="post">
-                <label for="fornavn">fornavn</label>
-                <input type="text" id="fornavn" name="fornavn" required>
-                <label for="etternavn">Etternavn:</label>
-                <input type="text" id="etternavn" name="etternavn" required>
-                <label for="postnummer">Postnummer:</label>
-                <input type="number" id="postnummer" name="postnummer" required>
-                <label for="poststed">Poststed:</label>
-                <input type="text" id="poststed" name="poststed" required>
-                <button type="submit">Large</button>
-                <button type="reset">Avbryt</button>
-            </form>
-        </section>
-        <section>
-            <h2>Levering</h2>
-            <form action="#" method="post">
-                <input type="radio" id="ekspress_hjem" name="levering" value="ekspress_hjem" required>
-                <label for="ekspress_hjem">Ekspresslevering hjem</label><br><br>
-                <p>3-4 virkedager</p>
-                <input type="radio" id="ekspress_utleveringssted" name="levering" value="ekspress_utleveringssted" required>
-                <label for="ekspress_utleveringssted">Ekspress pakke til utleveringssted</label><br><br>
-                <p>1-3 virkedager</p>
-                <input type="radio" id="standard_hjemlevering" name="levering" value="standard_hjemlevering" required>
-                <label for="standard_hjemlevering">Standard hjemlevering</label><br><br>
-                <p>5-8 virkedager</p>
-                <button type="submit">Bekreft leveringsvalg</button>
-            </form>
-        </section>
-        <section>
-            <h2>Betaling</h2>
-            <form action="#" method="post">
-                <label for="kortnummer">kortnummer:</label>
-                <input type="text" id="kortnummer" name="kortnummer" required>
-                <label for="utlopsdato">Utløpsdato (MM/ÅÅ)</label>
-                <input type="text" id="utlopsdato" name="utlopsdato" required>
-                <label for="cvc">CVC/CVV</label>
-                <input type="password" id="cvc" name="cvc" required>
-                <button type="submit">Betal nå</button>
-                <p>Du bekrefter herved at opplysningene og dokumentene du har oppgitt er korrekte og fullstendige. Leverandøren forbeholder seg retten til å heve eller avslutte avtaleforholdet dersom det foreligger uriktige eller ufullstendige opplysninger.</p>
-                <input type="checkbox" id="vilkar" name="vilkar" required>
-                <label for="vilkar">Ja, jeg godtar</label>
-                <input type="checkbox" id="nyhetsbrev" name="nyhetsbrev">
-                <label for="nyhetsbrev">Send nyhetsbrev</label>
-            </form>
-        </section>
+        <div class="shoppingbag">
+            <section>
+                <h2>Shoppingbaggen din</h2>
+                <article>
+                    <img src="Bilder/Campus_00s_Sko_Gronn_H03472_01_standard.avif" alt="Product name">
+                    <a href="#">Product name</a>
+                    <a href="#"><h3>Handbal Spezial</h3></a>
+                    <p>1999 kr</p>
+                    <h4>Størrelse</h4>
+                    <select id="storrelse" name="storrelse">
+                        <option value="small">S (Small)</option>
+                        <option value="medium">M (Medium)</option>
+                        <option value="large">L (Large)</option>
+                        <option value="x-large">XL (Extra Large)</option>
+                        <option value="xx-large">XXL (Double Extra Large)</option>
+                    </select>
+                    <h4>Antall</h4>
+                    <select id="antall" name="antall">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </article>
+                <article>
+                    <img src="Bilder/Campus_00s_Sko_Gronn_H03472_01_standard.avif" alt="Product name">
+                    <a href="#">Product name</a>
+                    <a href="#"><h3>Handbal Spezial</h3></a>
+                    <p>1999 kr</p>
+                    <h4>Størrelse</h4>
+                    <select id="storrelse1" name="storrelse1">
+                        <option value="small">S (Small)</option>
+                        <option value="medium">M (Medium)</option>
+                        <option value="large">L (Large)</option>
+                        <option value="x-large">XL (Extra Large)</option>
+                        <option value="xx-large">XXL (Double Extra Large)</option>
+                    </select>
+                    <h4>Antall</h4>
+                    <select id="antall1" name="antall1">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </article>
+            </section>
+        </div>
+        <div class="opplysninger">
+            <section>
+                <h2>Dine opplysninger</h2>
+                <form action="#" method="post">
+                    <label for="fornavn">Fornavn:</label>
+                    <input type="text" id="fornavn" name="fornavn" required>
+                    <label for="etternavn">Etternavn:</label>
+                    <input type="text" id="etternavn" name="etternavn" required>
+                    <label for="postnummer">Postnummer:</label>
+                    <input type="number" id="postnummer" name="postnummer" required>
+                    <label for="poststed">Poststed:</label>
+                    <input type="text" id="poststed" name="poststed" required>
+                    <button type="submit">Large</button>
+                    <button type="reset">Avbryt</button>
+                </form>
+            </section>
+        </div>
+        <div class="levering">
+            <section>
+                <h2>Levering</h2>
+                <form action="#" method="post">
+                    <img src="Bilder/delivery-truck.png" alt="lastebil">
+                    <p>3-4 virkedager</p>
+                    <input type="radio" id="ekspress_hjem" name="levering" value="ekspress_hjem" required>
+                    <label for="ekspress_hjem">Ekspresslevering hjem</label><br><br>
+                    <img src="Bilder/delivery-truck.png" alt="lastebil">
+                    <p>1-3 virkedager</p>
+                    <input type="radio" id="ekspress_utleveringssted" name="levering" value="ekspress_utleveringssted" required>
+                    <label for="ekspress_utleveringssted">Ekspress pakke til utleveringssted</label><br><br>
+                    <img src="Bilder/delivery-truck.png" alt="lastebil">
+                    <p>5-8 virkedager</p>
+                    <input type="radio" id="standard_hjemlevering" name="levering" value="standard_hjemlevering" required>
+                    <label for="standard_hjemlevering">Standard hjemlevering</label><br><br>
+                    <button type="submit">Bekreft leveringsvalg</button>
+                </form>
+            </section>
+        </div>
+        <div class="Betaling">
+            <section>
+                <h2>Betaling</h2>
+                <form action="#" method="post">
+                    <label for="kortnummer">kortnummer:</label>
+                    <input type="text" id="kortnummer" name="kortnummer" required>
+                    <label for="utlopsdato">Utløpsdato (MM/ÅÅ)</label>
+                    <input type="text" id="utlopsdato" name="utlopsdato" required>
+                    <label for="cvc">CVC/CVV</label>
+                    <input type="password" id="cvc" name="cvc" required>
+                    <p class="totalpris">Totalpris: 3998 kr</p>
+                    <button type="submit">Betal nå</button>
+                    <p>Du bekrefter herved at opplysningene og dokumentene du har oppgitt er korrekte og fullstendige. Leverandøren forbeholder seg retten til å heve eller avslutte avtaleforholdet dersom det foreligger uriktige eller ufullstendige opplysninger.</p>
+                    <input type="checkbox" id="vilkar" name="vilkar" required>
+                    <label for="vilkar">Ja, jeg godtar</label><br>
+                    <input type="checkbox" id="nyhetsbrev" name="nyhetsbrev">
+                    <label for="nyhetsbrev">Send nyhetsbrev</label>
+                </form>
+            </section>
+        </div>
     </main>
     <footer id="footer">
         <section>
@@ -152,10 +164,10 @@
             <h4>Sosiale medier</h4>
             <nav>
                 <ul>
-                    <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
-                    <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
-                    <li><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></li>
-                    <li><a href="https://www.pinterest.com" target="_blank">Pinterest</a></li>
+                    <li><a href="https://www.instagram.com" target="_blank"><img src="Bilder/instagram(1).png" alt="Instagram"></a></li>
+                    <li><a href="https://www.facebook.com" target="_blank"><img src="Bilder/facebook.png" alt="Facebook"></a></li>
+                    <li><a href="https://www.pinterest.com" target="_blank"><img src="Bilder/pinterest.png" alt="Pinterest"></a></li>
+                    <li><a href="https://www.linkedin.com" target="_blank"><img src="Bilder/web.png" alt="Linkedin"></a></li>
                 </ul>
             </nav>
         </section>
