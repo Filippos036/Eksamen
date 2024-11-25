@@ -52,7 +52,7 @@ nav ul img {
     top: -30px;
 }
 
-/*denne ...*/
+/*footer for alle tre*/
 #flyt-icon img:nth-of-type(2) {
     width: 40px;
     height: 40px;
@@ -193,7 +193,7 @@ main .populare-kort .kort-4 {
     grid-row: span 1; 
     background-size: cover;
     background-position: center;
-    background-image: url('../Bilder/cover.jpg');
+    background-image: url('../Bilder/cover.jpg'); /*bilde hentet fra https://codetheweb.blog/css-advanced-background-images/*/
 }
 
 main .populare-kort .kort-5 {
@@ -279,10 +279,7 @@ main a {
 }
 
 /* Media queries for index.html */
-
-/* For screens smaller than or equal to 768px */
 @media (max-width: 768px) {
-    /* Header styles */
     header {
         flex-direction: column;  
         padding: 1rem;
@@ -305,7 +302,6 @@ main a {
         height: 30px;
     }
 
-    /* Footer styles */
     #footer {
         padding: 1rem;  
         gap: 1rem;  
@@ -328,7 +324,6 @@ main a {
         width: 40px;  
     }
 
-    /* Main .populare-kort styles */
     main .populare-kort {
         grid-template-columns: 1fr;  
         padding: 1rem;
@@ -345,16 +340,24 @@ main a {
         height: auto;     
     }
 
-    /* Main .kategori-kort styles */
     main .kategori-kort {
         grid-template-columns: repeat(2, 1fr); 
     }
 }
 
-/* For screens smaller than or equal to 480px */
 @media (max-width: 480px) {
     main .kategori-kort {
         grid-template-columns: 1fr; 
+        gap: 1rem; 
+    }
+
+    main .kategori-kort img {
+        height: 250px; 
+        width: 250px;
+    }
+
+    main .kategori-kort > article {
+        padding: 0.5rem; 
     }
 }
 
