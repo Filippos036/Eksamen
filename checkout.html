@@ -88,7 +88,7 @@
                     <label for="etternavn">Etternavn:</label>
                     <input type="text" id="etternavn" name="etternavn" required>
                     <label for="postnummer">Postnummer:</label>
-                    <input type="number" id="postnummer" name="postnummer" required>
+                    <input type="text" id="postnummer" name="postnummer" maxlength="4" pattern="\d{4}" required title="Please enter exactly 4 digits.">
                     <label for="poststed">Poststed:</label>
                     <input type="text" id="poststed" name="poststed" required>
                     <button type="submit">Large</button>

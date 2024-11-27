@@ -8,7 +8,7 @@ header {
     justify-content: space-between; 
     align-items: center;
     padding: 1rem 2rem;
-    background-color: #f8f8f8; 
+    background-color: #f8f8f8;
 }
 
 nav {
@@ -566,6 +566,55 @@ main .Betaling form .totalpris {
     gap: 20px;
     padding: 20px;
     margin: auto;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.pro-nav {
+    margin-bottom: 15px;
+}
+
+.detaljer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 300px;
+    margin: 10px auto;
+    margin-left: -0px;
+}
+
+.kategori-link {
+    font-weight: bold;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.kategori-link:hover {
+    text-decoration: underline;
+}
+
+.produkt-farge, .produkt-pris {
+    font-size: 16px;
+    margin: 0;
+}
+
+.legg-til-handlekurv {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+}
+
+select {
+    padding: 8px;
+    font-size: 14px;
+    width: 100%;
+    margin-bottom: 10px;
 }
 
 .hovedbilde img {
@@ -573,6 +622,7 @@ main .Betaling form .totalpris {
     max-width: 700px;
     object-fit: cover;
     margin: auto;
+    border: 1px solid #ddd;
 }
 
 .side-bilde {
@@ -582,6 +632,7 @@ main .Betaling form .totalpris {
     object-fit: cover;
     margin: 5px;
     display: inline-block;
+    border: 1px solid #ddd;
 }
 
 .produktnavn section {
@@ -590,6 +641,8 @@ main .Betaling form .totalpris {
 }
 
 .lig-produkt {
+    display: flex;
+    justify-content: center;
     padding: 20px;
 }
 
