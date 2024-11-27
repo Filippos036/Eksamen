@@ -558,3 +558,88 @@ main .Betaling form .totalpris {
     text-align: center;
     margin-top: 15px;
 }
+
+/*for product.html*/
+.produktnavn {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+    margin: auto;
+}
+
+.hovedbilde img {
+    width: 100%;
+    max-width: 700px;
+    object-fit: cover;
+    margin: auto;
+}
+
+.side-bilde {
+    width: 100%;
+    max-width: 160px;
+    height: auto;
+    object-fit: cover;
+    margin: 5px;
+    display: inline-block;
+}
+
+.produktnavn section {
+    max-width: 700px;
+    margin: auto;
+}
+
+.lig-produkt {
+    padding: 20px;
+}
+
+.lig-produkt section {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.lig-produkt h2 {
+    margin-bottom: 20px;
+}
+
+.lig-produkt aside {
+    display: inline-block;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    max-width: 200px;
+    vertical-align: top;
+}
+
+.lig-produkt aside img {
+    width: 100%;
+    height: auto;
+}
+
+.lig-produkt aside h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+@media (min-width: 768px) {
+    .produktnavn {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    .hovedbilde, .side-bilde-container {
+        grid-column: 1 / 2;
+    }
+
+    .hovedbilde {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .side-bilde-container {
+        display: flex;
+        justify-content: space-around;
+    }
+}
