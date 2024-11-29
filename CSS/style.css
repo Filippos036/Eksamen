@@ -1,75 +1,772 @@
-html{
+/* Jeg vet at det finnes noe kode som overskriver hverandre og kasje hadde ikke trengs å være med, men 700 linjer med kode endte opp med å være litt uoversiktig :)*/
+/*header for alle tre sider*/
+html {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
-form input{
-    border-radius: 25px;
-    padding: 0.5rem
+header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #f8f8f8;
 }
 
-
-label[for="search"] {
-    position: absolute;
-    width: 1px;
-    height: 1px;
+nav {
+    margin: 0;
     padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
+    font-weight: bold;
+    font-size: 1.1rem;
 }
 
-#flyt-icon{
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+header img {
+    width: 35px;
+    height: 35px;
+    padding: 0.5rem;
+    object-fit: cover;
+}
+
+nav ul img {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    top: -15px;
+    padding: 0;
+}
+
+#flyt-icon { /*brukte id på footer iconene, dette var da jeg først starta med oppgaven, var usikker på hva jeg skulle bruke mellom id og class, eneste id som er i koden*/
     margin-left: 1rem;
     position: relative;
     top: -30px;
 }
 
-header{
+/*footer for alle tre*/
+#flyt-icon img:nth-of-type(2) { /*henta fra ChatGPT, den targeter den hjerte.png fordi den så mindre ut enn de andre*/
+    width: 40px;
+    height: 40px;
+}
+
+label[for="search"] {
+    position: absolute; 
+    width: 1px; 
+    height: 1px; 
+    padding: 0; 
+    margin: -1px; 
+    overflow: hidden; 
+    clip: rect(0, 0, 0, 0); 
+    border: 0; 
+}
+
+form input {
+    padding: 0.5rem;
+    margin-right: 1rem;
+}
+
+/* for index.html*/
+main {
+    padding: 2rem;
+}
+
+
+main section:first-of-type > h1, /*disse first-of-types ble henta fra ChatGPT*/
+main section:first-of-type > p {
     display: flex;
-    list-style: none;
+    flex-basis: 100%; 
+    margin: 0 auto 1rem; 
+    justify-content: center;
+}
+
+main .knapp {
+    display: flex; 
+    justify-content: center; 
+    gap: 1rem; 
+}
+
+main section:first-of-type > div > button { /*disse first-of-types ble henta fra ChatGPT*/
+    padding: 0.5rem 1rem; 
+    border: 1px solid black;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 1rem; 
+    margin: 0; 
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+main section:first-of-type > div > button:hover { /*disse first-of-types ble henta fra ChatGPT*/
+    background-color: #a3c4e6;
+    color: white;
+}
+
+
+main section:first-of-type a { /*disse first-of-types ble henta fra ChatGPT*/
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    padding: 0.5rem 0rem;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+
+main .anmeldelser-kort {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;  
+}
+
+main .kategori-kort {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 1rem;
+    margin-top: 3rem;
+    padding: 2rem; 
+    justify-items: center; 
+    align-items: center;  
+    width: 100%;  
+}
+
+main .kategori-kort > article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    padding: 1rem;
+    border-radius: 25px;
+}
+
+main .kategori-kort img {
+    height: 350px;
+    width: 350px;
+    border: 1px solid #424242;
+    border-radius: 25px;
+    object-fit: cover; 
+}
+
+main .populare-kort {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: auto;
+    gap: 0.5rem; 
+    margin-top: 2rem;
+}
+
+main .populare-kort > article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 11rem;
+    border-radius: 7px;
+    background-size: cover; 
+    background-position: center;
+}
 
-    nav{
-        padding: 2rem;
-        margin-left: auto;
-        margin-right: auto;
-        margin: auto;
-        font-weight: bold;
-        font-size: 1.1rem;
+main .populare-kort .kort-1,
+main .populare-kort .kort-2,
+main .populare-kort .kort-3 {
+    max-width: 300px;
+    grid-column: span 1; 
+    background-size: cover;
+    background-position: center;
+}
+
+main .populare-kort .kort-4 {
+    max-width: 864px;
+    grid-column: span 2; 
+    grid-row: span 1; 
+    background-size: cover;
+    background-position: center;
+    background-image: url('../Bilder/cover.jpg'); /*bilde hentet fra https://codetheweb.blog/css-advanced-background-images/*/
+}
+
+main .populare-kort .kort-5 {
+    max-width: 300px;
+    grid-column: 3; 
+    grid-row: 2; 
+    background-size: cover;
+    background-position: center;
+    background-image: url('../Bilder/cover.jpg'); /*bilde hentet fra https://codetheweb.blog/css-advanced-background-images/*/
+}
+
+main .populare-kort .kort-2, 
+main .populare-kort .kort-3 {
+    background-image: url('../Bilder/cover.jpg');  /*bilde hentet fra https://codetheweb.blog/css-advanced-background-images/*/
+}
+
+main .populare-kort .kort-1 {
+    background-image: url('../Bilder/cover.jpg'); /*bilde hentet fra https://codetheweb.blog/css-advanced-background-images/*/
+}
+
+.anmeldelser-kort img {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.anmeldelser-kort article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    padding: 1rem;
+    background-color: white;
+    text-align: center;
+}
+
+main a {
+    color: black;
+    text-decoration: none;
+}
+
+/*css footer for alle tre sider*/
+#footer {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: #f8f8f8;
+    justify-content: space-between;
+    flex-wrap: wrap;  
+}
+
+#footer section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-width: 150px;  
+}
+
+#footer section:nth-child(3) { /*disse nth-child ble henta fra ChatGPT*/
+    align-items: center;  
+}
+
+#footer section:nth-child(3) ul { /*disse nth-child ble henta fra ChatGPT*/
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;  
+}
+
+#footer h4 {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+#footer a {
+    text-decoration: none;
+    color: black;
+}
+
+#footer img {
+    width: 50px;
+    height: auto;
+}
+
+/* Media queries for index.html */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;  
+        padding: 1rem;
     }
 
-    ul{
+    nav ul {
+        margin-top: 10px;
+        flex-direction: column;  
+        align-items: center; 
+    }
+
+    #flyt-icon {
+        position: relative;
+        top: 0;
+        margin-left: 0;
+    }
+
+    #flyt-icon img {
+        width: 30px;
+        height: 30px;
+    }
+
+    #footer {
+        padding: 1rem;  
+        gap: 1rem;  
+    }
+
+    #footer section {
+        min-width: 100%;  
+        align-items: center; 
+    }
+
+    #footer section:nth-child(3) ul { /*disse nth-child ble henta fra ChatGPT*/
+        gap: 1rem;  
+    }
+
+    #footer h4 {
+        font-size: 1rem;  
+    }
+
+    #footer img {
+        width: 40px;  
+    }
+
+    main .populare-kort {
+        grid-template-columns: 1fr;  
+        padding: 1rem;
+    }
+
+    main .populare-kort > article {
+        max-width: 100%;  
+        grid-column: span 1; 
+        padding: 0.5rem;  
+    }
+
+    main .populare-kort img {
+        width: 100%;      
+        height: auto;     
+    }
+
+    main .kategori-kort {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 480px) {
+    main .kategori-kort {
+        grid-template-columns: 1fr; 
+        gap: 1rem; 
+    }
+
+    main .kategori-kort img {
+        height: 250px; 
+        width: 250px;
+    }
+
+    main .kategori-kort > article {
+        padding: 0.5rem; 
+    }
+}
+
+/*for kasse.html css*/
+main .shoppingbag {
+    margin-left: 500px;
+    max-width: 800px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+main .h-tag{
+    margin-left: 500px;
+}
+
+main .shoppingbag h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #333;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+main .shoppingbag article {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+main .shoppingbag article img {
+    width: 100%;
+    max-width: 500px;  
+    height: auto;     
+    margin-bottom: 10px;
+}
+
+main .shoppingbag article select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/*opplysninger css*/
+main .opplysninger {
+    margin-left: 500px;
+    align-items: center;
+    max-width: 800px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+main .opplysninger form label,
+main .opplysninger form input {
+    display: block;
+    width: 70%;
+    margin-bottom: 15px;
+    font-size: 1em;
+    padding: 10px;
+}
+
+main .opplysninger form button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #6a6b6b;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/*levering css*/
+main .levering {
+    margin-left: 500px;
+    max-width: 800px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+main .levering form input[type="radio"],
+main .levering form label {
+    display: block; 
+    margin-top: 5px; 
+}
+
+main .levering form label {
+    position: relative;
+    left: 35px;
+    top: -12px;
+}
+
+main .levering form label {
+    margin-left: 10px;
+    font-size: 1em;
+}
+
+main .levering form input {
+    position: relative;
+    bottom: -10px;
+}
+
+main .levering button {
+    display: block;
+    width: 100%; 
+    padding: 15px;
+    background-color: #6a6b6b;
+    color: white;
+    font-weight: bold; 
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 20px; 
+}
+
+main .levering img {
+    width: 30px; 
+    height: auto; 
+    vertical-align: middle; 
+    margin-right: 10px; 
+}
+
+main .levering p {
+    display: inline-block; 
+    vertical-align: middle; 
+    margin: 0; 
+}
+
+/*Betaling css*/
+main .Betaling section {
+    margin-left: 500px;
+    max-width: 800px;
+    border: 1px solid #ccc; 
+    padding: 15px; 
+    margin-bottom: 20px; 
+    border-radius: 5px; 
+}
+
+main .Betaling form #kortnummer {
+    display: block;
+    width: 100%; 
+    padding: 10px;
+    margin-bottom: 15px; 
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-sizing: border-box; 
+}
+
+main .Betaling form {
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 10px; 
+}
+
+main .Betaling form #utlopsdato,
+main .Betaling form #cvc {
+    width: 35%; 
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-sizing: border-box; 
+}
+
+main .Betaling form button {
+    display: block;
+    width: 100%; 
+    padding: 15px;
+    background-color: #6a6b6b;
+    color: white;
+    font-weight: bold; 
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 20px; 
+}
+
+main .Betaling form p {
+    text-align: center; 
+    font-size: 14px;
+    margin-top: 10px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+main .Betaling form label {
+    margin-left: 5px; 
+    vertical-align: middle;
+}
+
+main .Betaling form input[type="checkbox"] {
+    margin-right: 10px; 
+    vertical-align: middle;
+    margin-top: 5px;
+}
+
+main .Betaling form .totalpris {
+    font-size: 20px; 
+    font-weight: bold; 
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* Media queries for kasse.html, brukte Chatgpt for å fikse den margin-left når skjermen ble midre, funker bra på mobil og desktop, kansje ikke for tablet og små skjermer */
+@media (max-width: 768px) {
+    main .h-tag,
+    main .shoppingbag,
+    main .opplysninger,
+    main .levering,
+    main .Betaling section {
+        margin-left: 0; 
+        width: 90%; 
+        margin-right: auto; 
+        margin-left: auto; 
+    }
+
+    main .shoppingbag article img {
+        max-width: 100%; 
+    }
+
+    main .levering form input[type="radio"],
+    main .levering form label {
+        font-size: 0.9em; 
+    }
+
+    main .Betaling form #kortnummer,
+    main .Betaling form #utlopsdato,
+    main .Betaling form #cvc {
+        width: 100%; 
+    }
+
+    main .Betaling form button {
+        padding: 10px; 
+    }
+}
+
+
+@media (max-width: 480px) {
+    main .shoppingbag,
+    main .opplysninger,
+    main .levering,
+    main .Betaling section {
+        width: 100%; 
+        padding: 15px; 
+    }
+
+    main .Betaling form button {
+        font-size: 14px; 
+    }
+
+    main .levering p,
+    main .levering form label {
+        font-size: 0.85em;
+    }
+}
+
+/*for checkout.html*/
+.produktnavn {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+    margin: auto;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+}
+
+.pro-nav {
+    margin-bottom: 15px;
+    margin-left: 300px;
+}
+
+.detaljer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 300px;
+    margin: 10px auto;
+    margin-left: -0px;
+}
+
+.kategori-link {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.kategori-link:hover {
+    text-decoration: underline;
+}
+
+.produkt-farge, .produkt-pris {
+    font-size: 16px;
+    margin: 0;
+}
+
+.legg-til-handlekurv {
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+}
+
+select {
+    padding: 8px;
+    font-size: 14px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.hovedbilde img {
+    width: 100%;
+    max-width: 700px;
+    object-fit: cover;
+    margin: auto;
+    border: 1px solid #ddd;
+}
+
+.side-bilde {
+    width: 100%;
+    max-width: 160px;
+    height: auto;
+    object-fit: cover;
+    margin: 5px;
+    display: inline-block;
+    border: 1px solid #ddd;
+}
+
+.produktnavn section {
+    max-width: 700px;
+    margin: auto;
+}
+
+.lig-produkt {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.lig-produkt section {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.lig-produkt h2 {
+    margin-bottom: 20px;
+}
+
+.lig-produkt aside {
+    display: inline-block;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    max-width: 200px;
+    vertical-align: top;
+}
+
+.lig-produkt aside img {
+    width: 100%;
+    height: auto;
+}
+
+.lig-produkt aside h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Media queries for checkout.html */
+@media (min-width: 768px) {
+    .produktnavn {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    .hovedbilde, .side-bilde-container {
+        grid-column: 1 / 2;
+    }
+
+    .hovedbilde {
         display: flex;
-        list-style: none;
-        gap: 1rem;
+        justify-content: center;
+        align-items: center;
     }
 
-    a{
-        text-decoration: none;
-        color: black;
+    .side-bilde-container {
+        display: flex;
+        justify-content: space-around;
     }
+}
 
-    img{
-        width: 35px;
-        height: 35px;
-        padding: 1rem;
-        object-fit: cover;
-        gap: 0.5rem;
-    }
-
-    nav ul img{
-        position: relative;
-        padding: 1rem;
-        height: 60px;
-        width: 60px;
-        top: -30px;
-    }
-
-    form{
-        margin: 2rem;
-        position: relative;
-        top: -30px;
+@media (max-width: 480px) {
+    .pro-nav {
+        margin-left: 0px;
     }
 }
